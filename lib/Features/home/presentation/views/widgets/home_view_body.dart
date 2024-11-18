@@ -21,7 +21,7 @@ class HomeViewBody extends StatelessWidget {
               ),
               SizedBox(
                 height: MediaQuery.sizeOf(context).height * 0.28,
-                child: const FeaturedListView(),
+                child: FeaturedListView(),
               ),
               const SizedBox(
                 height: 16,

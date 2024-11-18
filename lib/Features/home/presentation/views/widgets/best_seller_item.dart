@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/styles.dart';
 import '../book_details_view.dart';
 import 'book_rating.dart';
+import 'custom_book_item.dart';
 
 class BestSellerItem extends StatelessWidget {
   const BestSellerItem({super.key});
@@ -21,19 +20,7 @@ class BestSellerItem extends StatelessWidget {
         margin: const EdgeInsets.only(bottom: 10),
         child: Row(
           children: [
-            AspectRatio(
-              aspectRatio: 1.7 / 2,
-              child: Container(
-                margin: const EdgeInsetsDirectional.only(end: 12),
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
-                  image: DecorationImage(
-                    image: AssetImage(Assets.book),
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ),
-            ),
+            CustomBookItem(ratio: 1.7 / 2),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,14 +31,14 @@ class BestSellerItem extends StatelessWidget {
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  Opacity(
+                  const Opacity(
                       opacity: 0.7,
                       child: Text("J.K. Rowling",style: Styles.textStyle14)),
                   Expanded(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("19.99 €",style: Styles.textStyle20,),
+                        const Text("19.99 €",style: Styles.textStyle20,),
                         BookRating(),
                       ],
                     ),

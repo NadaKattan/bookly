@@ -1,5 +1,5 @@
 import 'dart:ui';
-import 'package:bookly/Features/splash/presentation/views/splash_view.dart';
+import 'package:bookly/Features/home/presentation/views/home_view.dart';
 import 'package:bookly/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -25,7 +25,7 @@ class BooklyApp extends StatelessWidget {
         scaffoldBackgroundColor: kPrimaryColor,
         textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
       ),
-      home: const BookDetailsView(),
+      home: const HomeView(),
     );
   }
 }
