@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import '../book_details_view.dart';
 
 class FeaturedListView extends StatelessWidget {
-  FeaturedListView({this.padding=16,super.key});
+  FeaturedListView({this.padding = 16, super.key});
   double padding;
   @override
   Widget build(BuildContext context) {
@@ -14,16 +14,14 @@ class FeaturedListView extends StatelessWidget {
       padding: EdgeInsetsDirectional.only(start: padding),
       scrollDirection: Axis.horizontal,
       itemCount: 10,
-      itemBuilder: (context, index) =>
-          InkWell(
-            onTap: () {
-              Get.to(() => const BookDetailsView(),
-                  duration: const Duration(milliseconds: 500),
-                  transition: Transition.fade);
-            },
-            child: CustomBookItem(ratio: 1.2 / 2),
-          ),
+      itemBuilder: (context, index) => InkWell(
+        onTap: () {
+          Get.to(() => const BookDetailsView(),
+              duration: const Duration(milliseconds: 500),
+              transition: Transition.fade);
+        },
+        child: CustomBookItem(ratio: 1.2 / 2),
+      ),
     );
   }
 }
-

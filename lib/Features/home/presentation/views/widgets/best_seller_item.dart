@@ -27,18 +27,22 @@ class BestSellerItem extends StatelessWidget {
                 children: [
                   Text(
                     "Harry Potter and the Goblet of Fire",
-                    style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold),
+                    style: Styles.textStyle20
+                        .copyWith(fontWeight: FontWeight.bold),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
                   const Opacity(
                       opacity: 0.7,
-                      child: Text("J.K. Rowling",style: Styles.textStyle14)),
+                      child: Text("J.K. Rowling", style: Styles.textStyle14)),
                   Expanded(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text("19.99 €",style: Styles.textStyle20,),
+                        const Text(
+                          "19.99 €",
+                          style: Styles.textStyle20,
+                        ),
                         BookRating(),
                       ],
                     ),
@@ -52,4 +56,3 @@ class BestSellerItem extends StatelessWidget {
     );
   }
 }
-

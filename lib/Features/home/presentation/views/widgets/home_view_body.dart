@@ -27,7 +27,8 @@ class HomeViewBody extends StatelessWidget {
                 height: 16,
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.symmetric(horizontal: kPadding),
+                padding:
+                    const EdgeInsetsDirectional.symmetric(horizontal: kPadding),
                 child: Column(
                   children: [
                     Text(
@@ -48,7 +49,7 @@ class HomeViewBody extends StatelessWidget {
         SliverToBoxAdapter(
           child: ListView.builder(
             shrinkWrap: true,
-            physics:const NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             padding: const EdgeInsets.symmetric(horizontal: kPadding),
             itemBuilder: (context, index) => const BestSellerItem(),
             itemCount: 10,
@@ -58,5 +59,3 @@ class HomeViewBody extends StatelessWidget {
     );
   }
 }
-
-
